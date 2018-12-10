@@ -1,6 +1,7 @@
-apply from: '../common.gradle'
+apply from: "../common.gradle"
 
 dependencies {
+    compile project(':TextPrinter')
     testCompile 'io.cucumber:cucumber-java:4.2.0'
 }
 

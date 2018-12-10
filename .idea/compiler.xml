@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="CI-Test.CI-Test.main" target="1.8" />
-      <module name="CI-Test.CI-Test.test" target="1.8" />
+      <module name="CI-Test.CI-Test.main" target="11" />
+      <module name="CI-Test.CI-Test.test" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

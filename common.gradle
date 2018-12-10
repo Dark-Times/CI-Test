@@ -1,7 +1,5 @@
 apply plugin: 'java'
 
-group 'CI-Test'
-
 repositories {
     mavenCentral()
 }

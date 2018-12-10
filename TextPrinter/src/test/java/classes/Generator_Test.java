@@ -82,4 +82,9 @@ class Generator_Test extends Strings {
         addMultipleTokens();
         Assertions.assertFalse(generator.removeToken(Strings.t2));
     }
+
+    @Test
+    void doAThing() {
+        System.out.println("Hello you");
+    }
 }

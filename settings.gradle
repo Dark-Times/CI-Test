@@ -1,0 +1,4 @@
+rootProject.name = 'CI-Test'
+include 'TextPrinter'
+include 'TextPrinter_CucumberTests'
+

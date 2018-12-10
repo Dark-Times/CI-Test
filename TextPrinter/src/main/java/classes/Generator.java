@@ -17,14 +17,14 @@ public class Generator {
         CurrentTokens.add(new Token(name));
     }
 
+    List<Token> getCurrentTokens() {
+        return CurrentTokens;
+    }
+
     public List<String> listTokenNames() {
         List<String> list = new LinkedList<>();
         CurrentTokens.forEach(t -> list.add(t.getName()));
         return list;
-    }
-
-    List<Token> getCurrentTokens() {
-        return CurrentTokens;
     }
 
     boolean removeToken(String name) {

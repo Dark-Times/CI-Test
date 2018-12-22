@@ -1,0 +1,11 @@
+stage('Cleanup') {
+    deleteDir()
+}
+
+stage('Check-Out') {
+    git credentialsId: 'darktimes', url: 'https://github.com/Dark-Times/CI-Test.git'
+}
+
+stage('Execute Build Tasks') {
+    build 'CI-Test'
+}

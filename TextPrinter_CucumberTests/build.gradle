@@ -1,23 +1,11 @@
 apply from: "../common.gradle"
 
+project.ext {
+    cucumberVersion = '4.2.0'
+}
+
 dependencies {
     compile project(':TextPrinter')
-    testCompile 'io.cucumber:cucumber-java:4.2.0'
-}
-
-configurations {
-    cucumberRuntime {
-        extendsFrom testRuntime
-    }
-}
-
-task cucumber() {
-    dependsOn assemble, compileTestJava
-    doLast {
-        javaexec {
-            main = "cucumber.api.cli.Main"
-            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--plugin', 'pretty', '--glue', 'gradle.cucumber', 'src/test/resources']
-        }
-    }
+    testCompile 'io.cucumber:cucumber-java:' + cucumberVersion
+    testCompile 'io.cucumber:cucumber-junit:' + cucumberVersion
 }

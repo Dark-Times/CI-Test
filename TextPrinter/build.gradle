@@ -4,3 +4,20 @@ plugins {
 apply from: '../common.gradle'
 
 mainClassName = 'main.Main'
+
+dependencies {
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter-api:5.1.0'
+    )
+    testRuntimeOnly(
+            'org.junit.jupiter:junit-jupiter-engine:5.1.0'
+    )
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': "Main"
+        )
+    }
+}
